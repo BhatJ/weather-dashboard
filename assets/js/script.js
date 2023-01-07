@@ -62,7 +62,6 @@ var addCity = function(cityName)
                 displayWeather(city);
             } else
             {
-                console.log('Enter a valid city!')
                 return;
             }
         });
@@ -104,33 +103,31 @@ var restoreCityList = function()
 
 }
 
+/*
+ * A function to display the current weather and a 5-day forecast for the input city
+ * Uses the openweathermap api to get the 5-day forecast
+ * Downloads the weather icon from the api using the icon code provided in the received data
+ */
 var displayWeather = function (city) 
 {
     // Construct openweathermap query
     var apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat='+ city.lat + '&lon=' + city.lon + '&appid=' + weatherApiKey;
     const weatherAPIIconBaseUrl = 'https://openweathermap.org/img/wn/';
 
-    // Request data
+    // Request weather data
     fetch(apiUrl) 
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data)
-
-            console.log(data.list[0]);
-            console.log(data.list[8]);
-            console.log(data.list[16]);
-            console.log(data.list[24]);
-            console.log(data.list[32]);
-
-            
+        
+            // Update the current weather card
             $('#weather-city')[0].innerHTML = city.name + " " + dayjs.unix(data.list[0].dt).format('(MM/DD/YYYY)') + '<img src=' + weatherAPIIconBaseUrl + data.list[0].weather[0].icon + '.png'+'>';
             $('#weather-temp')[0].innerHTML = "Temp: " + (data.list[0].main.temp/10.0).toFixed(2) + " °C";
             $('#weather-wind')[0].innerHTML = "Wind: "+ data.list[0].wind.speed + " MPH";
             $('#weather-humidity')[0].innerHTML = "Humidity: " + data.list[0].main.humidity + " %";
 
-
+            // Update the forecast cards
             for (var i = 0, j = 0; i < 5; i++, j+=8)
             {
                 $('#forecast-' + i + '-city')[0].innerHTML = dayjs.unix(data.list[j].dt).format('MM/DD/YYYY');
@@ -159,9 +156,6 @@ var handleSearch = function (event)
 var handleCitySelect = function (event)
 {
     event.preventDefault();
-
-    console.log('city button pressed');
-    console.log(event.target.id);
 
     var city = JSON.parse(localStorage.getItem(event.target.id));
 
