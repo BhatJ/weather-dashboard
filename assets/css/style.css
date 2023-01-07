@@ -9,3 +9,30 @@
     font-weight: bolder;
     padding: 0;
 }
+
+.card {
+    background-color:  rgb(44, 57, 175);
+    color: white;
+    padding: 0;
+}
+
+.col-half-offset{
+    margin-left:4.166666667%
+}
+
+#current-weather {
+    margin-bottom: 5px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(108,117,125, 1));
+    color: black;
+    border: 1px solid black;
+}
+
+@media (max-width: 980px) {
+    .col-half-offset {
+        margin-left: 0;
+    }
+
+    #current-weather {
+        margin-bottom: 0;
+    }
+}

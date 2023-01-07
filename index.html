@@ -22,6 +22,90 @@
     </div>
   </nav>
 
+  <div class="container-fluid">
+    <!-- The search bar plus buttons for searched cities -->
+    <div class="row">
+      <div id="search-list" class="col-sm-4">
+        <form id="search-form">
+          <h1>Search for a city:</h1>
+          <input id="search-input" type="text" placeholder="Enter city!" class="form-control mb-3" id="event-input">
+          <button id="search-button" type="submit" class="btn col-12 btn-primary">search</button>
+        </form>
+        <hr>
+      </div>
+
+      <!-- The weather display -->
+      <div class="col-sm-8">
+        <!-- Current weather card -->
+        <div id="current-weather" class="mb-3 card bg-secondary">
+          <div class="card-body">
+            <h3 id="weather-city" class="card-title"></h3>
+            <h4 id="weather-temp" class="card-title"></h4>
+            <h4 id="weather-wind" class="card-title"></h4>
+            <h4 id="weather-humidity" class="card-title"></h4>
+          </div>
+        </div>
+
+        <h2 class="mb-3">5-day forecast:</h2>
+
+        <!-- Forecast day 1 -->
+        <div class="card mb-3 col-md-2 col-sm-12">
+          <div class="card-body">
+            <h4 id="forecast-0-city" class="card-title"></h4>
+            <img id="forecast-0-icon">
+            <h6 id="forecast-0-temp" class="card-title"></h6>
+            <h6 id="forecast-0-wind" class="card-title"></h6>
+            <h6 id="forecast-0-humidity" class="card-title"></h6>
+          </div>
+        </div>
+
+        <!-- Forecast day 2 -->
+        <div class="card mb-3 col-md-2 col-sm-12 col-half-offset">
+          <div class="card-body">
+            <h4 id="forecast-1-city" class="card-title"></h4>
+            <img id="forecast-1-icon">
+            <h6 id="forecast-1-temp" class="card-title"></h6>
+            <h6 id="forecast-1-wind" class="card-title"></h6>
+            <h6 id="forecast-1-humidity" class="card-title"></h6>
+          </div>
+        </div>
+
+        <!-- Forecast day 3 -->
+        <div class="card mb-3 col-md-2 col-sm-12 col-half-offset">
+          <div class="card-body">
+            <h4 id="forecast-2-city" class="card-title"></h4>
+            <img id="forecast-2-icon">
+            <h6 id="forecast-2-temp" class="card-title"></h6>
+            <h6 id="forecast-2-wind" class="card-title"></h6>
+            <h6 id="forecast-2-humidity" class="card-title"></h6>
+          </div>
+        </div>
+
+        <!-- Forecast day 4 -->
+        <div class="card mb-3 col-md-2 col-sm-12 col-half-offset">
+          <div class="card-body">
+            <h4 id="forecast-3-city" class="card-title"></h4>
+            <img id="forecast-3-icon">
+            <h6 id="forecast-3-temp" class="card-title"></h6>
+            <h6 id="forecast-3-wind" class="card-title"></h6>
+            <h6 id="forecast-3-humidity" class="card-title"></h6>
+          </div>
+        </div>
+
+        <!-- Forecast day 5 -->
+        <div class="card col-md-2 col-sm-12 col-half-offset">
+          <div class="card-body">
+            <h4 id="forecast-4-city" class="card-title"></h4>
+            <img id="forecast-4-icon">
+            <h6 id="forecast-4-temp" class="card-title"></h6>
+            <h6 id="forecast-4-wind" class="card-title"></h6>
+            <h6 id="forecast-4-humidity" class="card-title"></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="./assets/js/script.js"></script>
