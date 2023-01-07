@@ -1,0 +1,11 @@
+/* Weather dashboard CSS */
+
+#wd-navbar {
+    background-image: linear-gradient(to right, rgba(170, 138, 212, 0.2), rgba(44, 57, 175, 1));
+}
+
+#wd-logo {
+    color: black;
+    font-weight: bolder;
+    padding: 0;
+}
