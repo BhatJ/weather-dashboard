@@ -26,7 +26,7 @@ $(function ()
 var addCity = function(cityName)
 {
     // construct gecoding URL
-    var geocodingUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&appid=' + weatherApiKey;
+    var geocodingUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&appid=' + weatherApiKey;
 
     // fetch geographical coordinates using geocoding API call
     fetch(geocodingUrl) 
